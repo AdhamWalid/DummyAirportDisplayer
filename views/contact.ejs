@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Kivo Airline</title>
+  <link rel="stylesheet" href="/styles/contact.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Kivo Airline</h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/flights">Flights</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or need assistance, please fill out the form below and our team will get back to you shortly.</p>
+
+      <div class="contact-form-container">
+        <form action="/submit-contact" method="POST">
+            <div class="form-message">
+                <% if (typeof successMessage !== 'undefined') { %>
+                  <p class="success-message"><%= successMessage %></p>
+                <% } %>
+                <% if (typeof errorMessage !== 'undefined') { %>
+                  <p class="error-message"><%= errorMessage %></p>
+                <% } %>
+              </div>
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="fullName" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter the subject of your message" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Enter your message" required></textarea>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <!-- Success or Error Message -->
+
+    </section>
+  </main>
+  <br>
+  <br>
+  <footer>
+    <p>&copy; 2024 Kivo Airlines. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

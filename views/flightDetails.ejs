@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Details</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Kivo Airline</h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/flights">Flights</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="flight-details">
+      <h2>Flight Details for PNR: <%= flight.pnr %></h2>
+      <p><strong>Name:</strong> <%= flight.firstName %> <%= flight.lastName %></p>
+      <p><strong>Flight Number:</strong> <%= flight.flightNumber %></p>
+      <p><strong>Departure Date:</strong> <%= flight.departureDate %></p>
+      <p><strong>Departure Time:</strong> <%= flight.departureTime %></p>
+      <p><strong>From:</strong> <%= flight.origin %></p>
+      <p><strong>To:</strong> <%= flight.destination %></p>
+      <p><strong>Seat Class:</strong> <%= flight.seatClass %></p>
+      <p><strong>Seat Number:</strong> <%= flight.seatNumber %></p>
+      <p><strong>Status:</strong> <%= flight.bookingStatus %></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Doma Developments. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

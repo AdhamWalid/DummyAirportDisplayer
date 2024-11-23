@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Home Page</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Kivo Airline</h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/flights">Flights</a></li>
+        <li><a href="/contact">Contact</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <h2>Check Your Booking</h2>
+      <form action="/check-pnr" method="POST">
+        <div class="form-group">
+          <label for="pnr">PNR Number</label>
+          <input type="text" id="pnr" name="pnr" placeholder="Enter your PNR number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="lastName" placeholder="Enter your last name" required>
+        </div>
+
+        <button type="submit">Check Booking</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Doma Developments. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

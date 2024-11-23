@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Flights - Kivo Airline</title>
+  <link rel="stylesheet" href="/styles/flights.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Kivo Airline</h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/flights">Flights</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="flights-section">
+      <h2>Current Flights</h2>
+
+      <!-- Flight Table -->
+      <table class="flight-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Flight Number</th>
+            <th>Origin</th>
+            <th>Destination</th>
+            <th>Departure Date</th>
+            <th>Departure Time</th>
+            <th>Book</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% Ticket.forEach(Ticket => { %>
+            <tr>
+                <td><%= i++ %></td>
+                <td><%= Ticket.flightNumber %></td>
+                <td><%= Ticket.airline %></td>
+                <td><%= Ticket.arrivalAirport %></td> <!-- Use arrivalAirport for the destination -->
+                <td><%= Ticket.departureAirport %></td> <!-- Corrected field name for departure airport -->
+                <td><%= Ticket.departureTime %></td>
+                <td><button disabled="disabled">Book</button></td>
+                
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Kivo Airline. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
